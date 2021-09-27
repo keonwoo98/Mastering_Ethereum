@@ -107,3 +107,11 @@ contract Faucet {
 contract Faucet {
 ```
 이 줄은 다른 객체 지향 언어의 class 선언과 비슷하게 contract 객체를 선언한다. 컨트랙트는 `범위(scope)`를 정의하는 중괄호(`{}`) 사이의 모든 줄을 포함해서 정의하는데, 다른 많은 프로그래밍 언어에서 중괄호가 사용되는 방식과 같다.
+
+다음으로 Faucet 컨트랙트의 첫 번째 함수를 선언한다.
+
+```sol
+function withdraw(uint withdraw_amount) public {
+```
+
+이 함수의 이름은 withdraw이며, withdraw_amount라는 부호 없는 정수(uint) 인수 하나를 갖는다. 이 함수는 다른 함수에 의해 호출될 수 있는 공개(public) 함수로 선언된다. 함수 정의는 중괄호 사이에 온다. withdraw 함수의 첫 번째 부분은 출금에 대한 제한을 설정한다.
