@@ -115,3 +115,5 @@ function withdraw(uint withdraw_amount) public {
 ```
 
 이 함수의 이름은 withdraw이며, withdraw_amount라는 부호 없는 정수(uint) 인수 하나를 갖는다. 이 함수는 다른 함수에 의해 호출될 수 있는 공개(public) 함수로 선언된다. 함수 정의는 중괄호 사이에 온다. withdraw 함수의 첫 번째 부분은 출금에 대한 제한을 설정한다.
+
+
