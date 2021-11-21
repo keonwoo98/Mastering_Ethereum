@@ -239,10 +239,10 @@ BIT-39 표준은 시드의 파생에 선택적 암호문을 사용할 수 있다
 
 BIP-39는 여러 가지 프로그래밍 언어의 라이브러리로 구현되어 있다. 예를 들면 다음과 같다.
 
-[파이썬 니모닉(python-mnemonic)](https://github.com/trezor/python-mnemonic))
+[파이썬 니모닉(python-mnemonic)](https://github.com/trezor/python-mnemonic)
 * 파이썬으로 BIP-39를 제안한 사토시랩(SatoshiLabs) 팀의 표준참조 구현
 
-[컨센시스/이더-라이트월렛(ConsenSys/eth-lightwallet)](https://github.com/ConsenSys/eth-lightwallet))
+[컨센시스/이더-라이트월렛(ConsenSys/eth-lightwallet)](https://github.com/ConsenSys/eth-lightwallet)
 * 노드와 브러우저용 경량 JS 이더리움 지갑(BIP-39 포함)
 
 [npm/bit39](https://www.npmjs.com/package/bip39)
