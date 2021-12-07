@@ -206,7 +206,7 @@ web3.eth.sendTransaction({from: src, to: dst, \
 
 **[그림 6-1] 값은 있지만 데이터가 없는 트랜잭션을 보여주는 패리티 지갑**
 
-
+![](https://images.velog.io/images/dogfootbirdfoot/post/2cc8967a-226f-4a91-beb3-f2aeba336342/6-1.png)
 
 다음 예제는 값과 데이터 페이로드가 모두 있는 경우다.
 
@@ -219,7 +219,7 @@ web3.eth.sendTransaction({from: src, to: dst, \
 
 **[그림 6-2] 값과 데이터가 있는 트랜잭션을 보여주는 패리티 지갑**
 
-
+![](https://images.velog.io/images/dogfootbirdfoot/post/ba487b69-31ba-4df8-96c9-d6ead90290ce/6-2.png)
 
 다음 트랜잭션은 데이터 페이로드를 포함하지만 값은 0을 지정한다.
 
@@ -231,7 +231,7 @@ web3.eth.sendTransaction({from: src, to: dst, value: 0, data: "0x1234"});
 
 **[그림 6-3] 값이 없고 데이터만 있는 트랜잭션을 보여주는 패리티 지갑**
 
-
+![](https://images.velog.io/images/dogfootbirdfoot/post/e8b2087b-48a6-4626-84ed-a19c69c8b14e/6-3.png)
 
 마지막으로, 이 트랜잭션에는 보낼 값이나 데이터 페이로드가 포함되지 않는다.
 
@@ -243,7 +243,7 @@ web3.eth.sendTransaction({from: src, to: dst, value: 0, data: ""});
 
 **[그림 6-4] 값이 없고 데이터가 없는 트랜잭션을 보여주는 패리티 지갑**
 
-
+![](https://images.velog.io/images/dogfootbirdfoot/post/8bd4956e-e670-468f-b4ae-9898df05ca90/6-4.png)
 
 ### **5-1. EOA 및 컨트랙트에 값 전달**
 
@@ -310,3 +310,21 @@ withdraw(uint256)
 ```
 
 이것이 우리 트랜잭션의 데이터 페이로드이며, withdraw 함수를 호출하고 0.01이더를 withdraw_amount로 요청한다.
+
+## **6. 특별 트랜잭션: 컨트랙트 생성**
+
+우리가 언급해야 할 특별한 경우 중 하나는 블록체인에 `새로운 컨트랙트를 만들어` 향후 사용을 위해 배포하는 트랜잭션이다. 컨트랙트 생성 트랜잭션은 `제로 어드레스`라고 하는 특수 대상 주소로 전송된다. 컨트랙트 등록 트랜잭션의 to 필드는 `0x0` 주소를 포함한다. 이 주소는 EOA(해당하는 개인키-공개키 쌍이 없음)나 컨트랙트를 나타내지 않는다. 결코 이더를 소비하거나 트랜잭션을 시작할 수 없다. 이 필드는 목적지로만 사용되며, '컨트랙트 작성'이라는 특별한 의미로 사용된다.
+
+
+
+**[그림 6-5]**
+
+![](https://images.velog.io/images/dogfootbirdfoot/post/792b2982-b0a9-4b8f-bb07-99f358c36216/6-5.png)
+
+**[그림 6-6]**
+
+![](https://images.velog.io/images/dogfootbirdfoot/post/cc6d9e90-6e47-45f6-b433-a08351263142/6-6.png)
+
+**[그림 6-7]**
+
+![](https://images.velog.io/images/dogfootbirdfoot/post/0ffb248d-e1b7-4597-9bb9-f055e7611a36/6-7.png)
